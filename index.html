@@ -2,31 +2,29 @@
 <html lang=uk>
 <head>
 	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Архітектура</title>
-	<link rel='stylesheet' href='css/bootstrap.min.css' type='text/css' media='all'>
+	<link rel="stylesheet" href="CSS/site.css">
 </head>
 <body>
-  <div class="container-fluid">
-    <div class="text-center page-header container-fluid"
-      style="font-family:Times; background-color: #eeeeff">
+  <header class="site-header">
+    <div class="container">
       <h1>Архітектура міста Львова</h1>
+      <p>Добірка визначних пам'яток та історичних споруд міста.</p>
     </div>
-  </div>
+  </header>
 
-  <ul>
-    </br>
-    <li><a href="churchs.html">Церкви та монастирі</a></li>
-    </br>
-    <li><a href="defensive.html">Оборонні споруди</a></li>
-    </br>
-    <li><a href="civil.html">Цивільна архітектура</a></li>
-  </ul>
+  <main class="container">
+    <section class="navigation-card" aria-labelledby="categories-title">
+      <h2 id="categories-title">Розділи</h2>
+      <ul>
+        <li><a href="churchs.html">Церкви та монастирі</a></li>
+        <li><a href="defensive.html">Оборонні споруди</a></li>
+        <li><a href="civil.html">Цивільна архітектура</a></li>
+      </ul>
+    </section>
 
-  <p>
-    <a href="lab2.2/" aria-label="Відкрити лабораторну роботу №2.2"
-      style="display: inline-block; padding: 10px 16px; color: #ffffff; font-family: Arial, sans-serif; font-weight: bold; text-decoration: none; background-color: #4f46e5; border-radius: 6px;">
-      Лабораторна №2.2
-    </a>
-  </p>
+    <a class="lab-link" href="lab2.2/" aria-label="Відкрити лабораторну роботу №2.2">Лабораторна №2.2</a>
+  </main>
 </body>
 </html>
