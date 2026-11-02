@@ -1,25 +1,58 @@
-﻿<!DOCTYPE html>
-<html lang=uk>
+<!DOCTYPE html>
+<html lang="uk">
 <head>
-	<meta charset="UTF-8">
-	<title>Архітектура</title>
-	<link rel='stylesheet' href='css/bootstrap.min.css' type='text/css' media='all'>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Про мене</title>
 </head>
 <body>
-  <div class="container-fluid">
-    <div class="text-center page-header container-fluid"
-      style="font-family:Times; background-color: #eeeeff">      
-      <h1>Архітектура міста Львова</h1>
-    </div>
-  </div>
+  <header>
+    <h1>Про мене</h1>
+  </header>
 
-  <ul>
-    </br>
-    <li><a href="churchs.html">Церкви та монастирі</a></li>
-    </br>
-    <li><a href="defensive.html">Оборонні споруди</a></li>
-    </br>
-    <li><a href="civil.html">Цивільна архітектура</a></li>
-  </ul>
+  <main>
+    <section>
+      <h2>Коротко</h2>
+      <p>Мене звати Олексій. Я навчаюся основ HTML та створюю прості вебсторінки.</p>
+
+      <h2>Мої інтереси</h2>
+      <ul>
+        <li>Веброзробка</li>
+        <li>Навчання</li>
+        <li>Читання</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Зв'язок зі мною</h2>
+      <form>
+        <p>
+          <label for="name">Ім'я:</label><br>
+          <input type="text" id="name" name="name">
+        </p>
+
+        <p>
+          <label for="email">Електронна пошта:</label><br>
+          <input type="email" id="email" name="email">
+        </p>
+
+        <p>
+          <label for="topic">Оберіть тему:</label><br>
+          <select id="topic" name="topic">
+            <option value="question">Запитання</option>
+            <option value="cooperation">Співпраця</option>
+            <option value="feedback">Відгук</option>
+          </select>
+        </p>
+
+        <p>
+          <label for="message">Повідомлення:</label><br>
+          <textarea id="message" name="message" rows="5" cols="30"></textarea>
+        </p>
+
+        <button type="submit">Відправити</button>
+      </form>
+    </section>
+  </main>
 </body>
 </html>
