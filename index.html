@@ -1,64 +1,25 @@
 <!DOCTYPE html>
-<html lang="uk">
+<html lang=uk>
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Про мене</title>
-  <link rel="stylesheet" href="CSS/style.css">
+	<meta charset="UTF-8">
+	<title>Архітектура</title>
+	<link rel='stylesheet' href='css/bootstrap.min.css' type='text/css' media='all'>
 </head>
 <body>
-  <header class="hero">
-    <div class="hero__content">
-      <p class="eyebrow">Моя персональна сторінка</p>
-      <h1>Про мене</h1>
-      <p class="hero__subtitle">Знайомтеся: я роблю перші кроки у веброзробці.</p>
+  <div class="container-fluid">
+    <div class="text-center page-header container-fluid"
+      style="font-family:Times; background-color: #eeeeff">
+      <h1>Архітектура міста Львова</h1>
     </div>
-  </header>
+  </div>
 
-  <main>
-    <section class="card about" aria-labelledby="about-title">
-      <h2>Коротко</h2>
-      <p>Мене звати Олексій. Я навчаюся основ HTML та створюю прості вебсторінки.</p>
-
-      <h2 id="about-title">Мої інтереси</h2>
-      <ul>
-        <li>Веброзробка</li>
-        <li>Навчання</li>
-        <li>Читання</li>
-      </ul>
-    </section>
-
-    <section class="card contact" aria-labelledby="contact-title">
-      <h2 id="contact-title">Зв'язок зі мною</h2>
-      <p class="section-intro">Залиште повідомлення — буду радий вашому зверненню.</p>
-      <form aria-labelledby="contact-title">
-        <p>
-          <label for="name">Ім'я</label>
-          <input type="text" id="name" name="name" placeholder="Введіть ваше ім'я">
-        </p>
-
-        <p>
-          <label for="email">Електронна пошта</label>
-          <input type="email" id="email" name="email" placeholder="name@example.com">
-        </p>
-
-        <p>
-          <label for="topic">Оберіть тему</label>
-          <select id="topic" name="topic">
-            <option value="question">Запитання</option>
-            <option value="cooperation">Співпраця</option>
-            <option value="feedback">Відгук</option>
-          </select>
-        </p>
-
-        <p>
-          <label for="message">Повідомлення</label>
-          <textarea id="message" name="message" rows="5" cols="30" placeholder="Напишіть ваше повідомлення"></textarea>
-        </p>
-
-        <button type="submit">Відправити</button>
-      </form>
-    </section>
-  </main>
+  <ul>
+    </br>
+    <li><a href="churchs.html">Церкви та монастирі</a></li>
+    </br>
+    <li><a href="defensive.html">Оборонні споруди</a></li>
+    </br>
+    <li><a href="civil.html">Цивільна архітектура</a></li>
+  </ul>
 </body>
 </html>
