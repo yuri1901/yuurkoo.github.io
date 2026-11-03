@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="uk">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Основи JavaScript: Hello World, typeof та isNaN.">
+  <title>Основи JavaScript — лабораторна №5.2</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- Внутрішній JavaScript у head: зберігаємо повідомлення для першої демонстрації. -->
+  <script>
+    window.helloFromHead = 'Hello World!';
+  </script>
+  <!-- Зовнішній JavaScript підключено у head із defer. -->
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="page-shell">
+      <p class="eyebrow">Лабораторна робота №5.2 · Vanilla JavaScript</p>
+      <h1>JavaScript без зайвих складнощів</h1>
+      <p class="lead">Три короткі інтерактивні демонстрації: перше повідомлення, визначення типів і перевірка чисел.</p>
+      <a class="back-link" href="../">← На головну</a>
+    </div>
+  </header>
+
+  <main class="page-shell main-content">
+    <section class="demo-section" aria-labelledby="hello-title">
+      <div class="section-heading">
+        <p class="eyebrow">Завдання 1</p>
+        <h2 id="hello-title">Hello World!</h2>
+        <p>Одне повідомлення підготовлено внутрішнім скриптом у <code>&lt;head&gt;</code>, друге — зовнішнім файлом, а третє — внутрішнім скриптом у кінці <code>&lt;body&gt;</code>.</p>
+      </div>
+      <div class="hello-grid">
+        <div class="result-card result-card--head">
+          <span class="result-card__label">Внутрішній JS · head</span>
+          <strong id="headHello">Очікування...</strong>
+          <small>Скрипт виконується в head до завантаження сторінки.</small>
+        </div>
+        <div class="result-card result-card--external">
+          <span class="result-card__label">Зовнішній JS · script.js</span>
+          <strong id="externalHello">Очікування...</strong>
+          <small>Файл підключено в head з атрибутом <code>defer</code>.</small>
+        </div>
+        <div class="result-card result-card--body">
+          <span class="result-card__label">Внутрішній JS · body</span>
+          <strong id="bodyHello">Очікування...</strong>
+          <small>Скрипт розміщено безпосередньо перед закриттям body.</small>
+        </div>
+      </div>
+    </section>
+
+    <section class="demo-section" aria-labelledby="typeof-title">
+      <div class="section-heading">
+        <p class="eyebrow">Завдання 2</p>
+        <h2 id="typeof-title">Оператор typeof</h2>
+        <p>JavaScript повертає назву типу значення. Натисніть на рядок, щоб побачити його в консолі браузера.</p>
+      </div>
+      <div class="type-table" role="table" aria-label="Приклади роботи оператора typeof">
+        <div class="type-row type-row--header" role="row"><span role="columnheader">Приклад</span><span role="columnheader">Значення</span><span role="columnheader">Результат typeof</span></div>
+        <div class="type-row" role="row"><code>42</code><span>42</span><strong class="type-result">number</strong></div>
+        <div class="type-row" role="row"><code>'Львів'</code><span>«Львів»</span><strong class="type-result">string</strong></div>
+        <div class="type-row" role="row"><code>true</code><span>true</span><strong class="type-result">boolean</strong></div>
+        <div class="type-row" role="row"><code>undefined</code><span>undefined</span><strong class="type-result">undefined</strong></div>
+        <div class="type-row" role="row"><code>{ назва: 'місто' }</code><span>{ назва: 'місто' }</span><strong class="type-result">object</strong></div>
+      </div>
+      <p id="typeStatus" class="status-line" role="status" aria-live="polite">Типи визначені за допомогою JavaScript.</p>
+    </section>
+
+    <section class="demo-section demo-section--number" aria-labelledby="number-title">
+      <div class="number-layout">
+        <div class="section-heading">
+          <p class="eyebrow">Завдання 3</p>
+          <h2 id="number-title">Перевірка через isNaN</h2>
+          <p>Введіть значення у prompt. Програма окремо повідомить про число, текст, порожнє введення або скасування.</p>
+          <button id="numberButton" class="primary-button" type="button">Ввести число <span aria-hidden="true">→</span></button>
+        </div>
+        <div id="numberResult" class="number-result" role="status" aria-live="polite">
+          <span class="number-result__icon" aria-hidden="true">?</span>
+          <div><strong>Результат з'явиться тут</strong><p>Натисніть кнопку, щоб розпочати перевірку.</p></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer"><div class="page-shell"><p>Основи JavaScript · лабораторна робота №5.2</p></div></footer>
+
+  <!-- Внутрішній JavaScript у body: показуємо результат третього способу підключення. -->
+  <script>
+    document.querySelector('#bodyHello').textContent = 'Hello World!';
+  </script>
+</body>
+</html>
