@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="uk">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Лабораторна робота з JavaScript DOM та подій.">
+  <title>Інтерактивний DOM — лабораторна №6.2</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="page-shell">
+      <p class="eyebrow">Лабораторна робота №6.2 · JavaScript</p>
+      <h1>Спробуйте змінити сторінку</h1>
+      <p class="lead">Практична демонстрація DOM-методів і подій миші без фреймворків.</p>
+      <a class="back-link" href="../">← На головну</a>
+    </div>
+  </header>
+
+  <main class="page-shell main-content">
+    <section class="lab-card" aria-labelledby="text-demo-title">
+      <div class="card-index">01</div>
+      <div class="lab-card__body">
+        <p class="eyebrow">Зміна тексту</p>
+        <h2 id="text-demo-title">Привітання через DOM</h2>
+        <p class="description">Кнопка викликає функцію <code>changeText()</code>. Вона знаходить абзац за ідентифікатором і змінює його властивість <code>textContent</code>.</p>
+        <div class="demo-panel demo-panel--message">
+          <span class="panel-label">Абзац із id="greeting"</span>
+          <p id="greeting">Привіт!</p>
+          <div class="actions">
+            <button class="button button--primary" type="button" onclick="changeText()">Натисни</button>
+            <button class="button button--soft" type="button" onclick="resetText()">Відновити текст</button>
+          </div>
+          <p id="textStatus" class="status" role="status" aria-live="polite">Стан: початкове привітання.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="lab-card" aria-labelledby="style-demo-title">
+      <div class="card-index card-index--orange">02</div>
+      <div class="lab-card__body">
+        <p class="eyebrow">Зміна стилів</p>
+        <h2 id="style-demo-title">Квадрат, який реагує на курсор</h2>
+        <p class="description">Події <code>onmouseover</code> та <code>onmouseout</code> викликають JavaScript-функції, що змінюють <code>style.backgroundColor</code>.</p>
+        <div class="demo-panel demo-panel--color">
+          <div id="box" onmouseover="changeColor()" onmouseout="resetColor()" role="img" aria-label="Інтерактивний квадрат"></div>
+          <div class="color-info">
+            <span class="panel-label">Стан кольору</span>
+            <strong id="colorStatus">lightblue</strong>
+            <p>Наведіть курсор на квадрат, а потім заберіть його, щоб побачити обидві події.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer"><div class="page-shell"><p>DOM та події · JavaScript · лабораторна №6.2</p></div></footer>
+</body>
+</html>

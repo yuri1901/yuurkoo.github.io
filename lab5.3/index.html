@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="uk">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="JavaScript DOM та події: зміна тексту й стилів HTML-елементів.">
+  <title>DOM та події — лабораторна №5.3</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="page-shell">
+      <p class="eyebrow">Лабораторна робота №5.3 · DOM та події</p>
+      <h1>Сторінка, яка реагує на дії</h1>
+      <p class="lead">Дві прості демонстрації показують, як JavaScript знаходить елементи та змінює їхній вміст і стиль.</p>
+      <a class="back-link" href="../">← На головну</a>
+    </div>
+  </header>
+
+  <main class="page-shell main-content">
+    <section class="demo-card" aria-labelledby="text-title">
+      <div class="card-number">01</div>
+      <div class="demo-card__content">
+        <p class="eyebrow">Завдання 1 · DOM</p>
+        <h2 id="text-title">Зміна тексту HTML-елемента</h2>
+        <p class="explanation">Натисніть кнопку, щоб JavaScript звернувся до елемента через <code>document.getElementById("greeting")</code> і замінив його <code>textContent</code>.</p>
+        <div class="demo-stage demo-stage--text">
+          <span class="stage-label">Поточний напис</span>
+          <p id="greeting">Привіт!</p>
+          <div class="button-row">
+            <button class="action-button" type="button" onclick="changeText()">Натисни</button>
+            <button class="quiet-button" type="button" onclick="resetText()">Відновити</button>
+          </div>
+          <p id="textStatus" class="interaction-status" role="status" aria-live="polite">Очікується дія користувача.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="demo-card" aria-labelledby="style-title">
+      <div class="card-number card-number--coral">02</div>
+      <div class="demo-card__content">
+        <p class="eyebrow">Завдання 2 · Події миші</p>
+        <h2 id="style-title">Зміна стилів HTML-елемента</h2>
+        <p class="explanation">Наведіть курсор на квадрат. Обробник <code>onmouseover</code> викличе <code>changeColor()</code>, а після виходу курсора <code>onmouseout</code> запустить <code>resetColor()</code>.</p>
+        <div class="demo-stage demo-stage--color">
+          <div id="box" onmouseover="changeColor()" onmouseout="resetColor()" role="img" aria-label="Інтерактивний квадрат, який змінює колір"></div>
+          <div class="color-copy">
+            <span class="stage-label">Спробуйте взаємодію</span>
+            <strong id="colorStatus">lightblue</strong>
+            <p>Квадрат має розмір 100 × 100px. Колір змінюється саме через JavaScript-властивість <code>style.backgroundColor</code>.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer"><div class="page-shell"><p>Основи JavaScript · DOM та події · лабораторна №5.3</p></div></footer>
+</body>
+</html>
