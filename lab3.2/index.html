@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Навчальний приклад семантичного HTML-блогу з таблицею та мультимедіа.">
+  <title>Міський щоденник — лабораторна робота №3.2</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header" id="top">
+    <div class="container">
+      <p class="kicker">Лабораторна робота №3.2</p>
+      <h1>Міський щоденник</h1>
+      <h2>Нотатки про затишні місця, речі та звуки довкола</h2>
+
+      <nav class="site-nav" aria-label="Основна навігація">
+        <ul>
+          <li><a href="#blog">Блог</a></li>
+          <li><a href="#products">Таблиця продуктів</a></li>
+          <li><a href="#media">Мультимедіа</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <article id="blog" class="content-card">
+      <div class="section-heading">
+        <p class="kicker">Свіжий запис</p>
+        <h2>Повільний ранок у старому місті</h2>
+      </div>
+
+      <section aria-labelledby="morning-title">
+        <h3 id="morning-title">Кава, сторінки й перші промені</h3>
+        <p>Є ранки, коли місто ще говорить пошепки. Тепле світло ковзає фасадами, а чашка кави допомагає помітити деталі, повз які зазвичай поспішаєш.</p>
+        <p>Саме в такі моменти народжуються найкращі короткі нотатки: про людей, вулиці та маленькі відкриття, які роблять звичайний день особливим.</p>
+      </section>
+
+      <section aria-labelledby="idea-title">
+        <h3 id="idea-title">Маленький план на сьогодні</h3>
+        <p>Відкласти телефон, пройтися знайомим маршрутом і знайти одну нову деталь. Можливо, це буде незвичайна ручка на дверях, тиха мелодія з відкритого вікна або затишна кав'ярня за рогом.</p>
+      </section>
+    </article>
+
+    <section id="products" class="content-card" aria-labelledby="products-title">
+      <div class="section-heading">
+        <p class="kicker">Невеликий список покупок</p>
+        <h2 id="products-title">Таблиця продуктів</h2>
+      </div>
+
+      <div class="table-wrap">
+        <table>
+          <caption>Розрахунок вартості товарів</caption>
+          <thead>
+            <tr>
+              <th scope="col">Назва</th>
+              <th scope="col">Ціна</th>
+              <th scope="col">Кількість</th>
+              <th scope="col">Сума</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Кава в зернах</td>
+              <td>89 грн</td>
+              <td>2</td>
+              <td>178 грн</td>
+            </tr>
+            <tr>
+              <td>Паперовий блокнот</td>
+              <td>145 грн</td>
+              <td>3</td>
+              <td>435 грн</td>
+            </tr>
+            <tr>
+              <td>Бездротові навушники</td>
+              <td>799 грн</td>
+              <td>1</td>
+              <td>799 грн</td>
+            </tr>
+            <tr>
+              <td>Настільна лампа</td>
+              <td>620 грн</td>
+              <td>2</td>
+              <td>1 240 грн</td>
+            </tr>
+          </tbody>
+          <tfoot>
+            <tr>
+              <th scope="row" colspan="3">Разом</th>
+              <td>2 652 грн</td>
+            </tr>
+          </tfoot>
+        </table>
+      </div>
+    </section>
+
+    <section id="media" class="content-card" aria-labelledby="media-title">
+      <div class="section-heading">
+        <p class="kicker">Побачити й почути</p>
+        <h2 id="media-title">Мультимедійна листівка</h2>
+      </div>
+
+      <div class="media-grid">
+        <figure class="media-item media-item--image">
+          <img src="../Images/Palace of Kornyakt.png" alt="Історичний фасад Палацу Корнякта у Львові">
+          <figcaption>Архітектурна деталь, що зберігає пам'ять міста.</figcaption>
+        </figure>
+
+        <figure class="media-item">
+          <video src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4" controls width="640" height="360" poster="../Images/Palace of Kornyakt.png">
+            Ваш браузер не підтримує відтворення відео.
+          </video>
+          <figcaption>Коротке відео з квіткою у м'якому денному світлі.</figcaption>
+        </figure>
+
+        <figure class="media-item media-item--audio">
+          <div class="audio-art" aria-hidden="true">♫</div>
+          <audio src="https://interactive-examples.mdn.mozilla.net/media/cc0-audio/t-rex-roar.mp3" controls>
+            Ваш браузер не підтримує відтворення аудіо.
+          </audio>
+          <figcaption>Звукова пауза для уважного слухання.</figcaption>
+        </figure>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>Автор: Олексій · Навчальний блог про вебтехнології</p>
+      <a href="#top">На початок ↑</a>
+    </div>
+  </footer>
+</body>
+</html>
