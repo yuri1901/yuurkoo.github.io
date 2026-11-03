@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="uk">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Вулиці Львова</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="shell">
+      <nav class="nav"><a class="brand" href="/streets"><span>Л</span> Львівські маршрути</a><div class="nav-links"><a class="nav-link nav-link--active" href="/streets">Вулиці</a><a class="nav-link" href="/houses">Будинки</a></div></nav>
+      <div class="hero-copy"><p class="eyebrow">NeDB · Express · EJS</p><h1>Вулиці Львова</h1><p>Невеликий каталог міських маршрутів, збережених у файловій базі даних.</p></div>
+    </div>
+  </header>
+  <main class="shell content">
+    <div class="section-top"><div><p class="eyebrow">Колекція streets</p><h2>Оберіть вулицю</h2></div><span class="count-badge"><%= streets.length %> записи</span></div>
+    <div class="street-grid">
+      <% streets.forEach((street, index) => { %>
+        <article class="street-card">
+          <span class="card-number">0<%= index + 1 %></span>
+          <h3><%= street.name %></h3>
+          <p>Перегляньте будинки та адреси, пов'язані з цією вулицею.</p>
+          <a class="card-link" href="/houses?streetId=<%= encodeURIComponent(street._id) %>">Дивитися будинки <span aria-hidden="true">→</span></a>
+        </article>
+      <% }) %>
+    </div>
+  </main>
+  <footer class="site-footer"><div class="shell"><span>Львівські маршрути</span><span>Дані з NeDB</span></div></footer>
+</body>
+</html>

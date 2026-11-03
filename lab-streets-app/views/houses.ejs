@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="uk">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Будинки Львова</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <header class="site-header site-header--compact">
+    <div class="shell">
+      <nav class="nav"><a class="brand" href="/streets"><span>Л</span> Львівські маршрути</a><div class="nav-links"><a class="nav-link" href="/streets">Вулиці</a><a class="nav-link nav-link--active" href="/houses">Будинки</a></div></nav>
+      <div class="hero-copy"><p class="eyebrow">Колекція houses</p><h1>Будинки Львова</h1><p>Адреси з бази даних, згруповані за назвою вулиці.</p></div>
+    </div>
+  </header>
+  <main class="shell content">
+    <div class="section-top"><div><p class="eyebrow">Фільтр за вулицею</p><h2><%= selectedStreetId ? 'Вибрані будинки' : 'Усі будинки' %></h2></div><span class="count-badge"><%= houses.length %> записи</span></div>
+    <div class="filter-row"><a class="filter-chip <%= selectedStreetId === '' ? 'filter-chip--active' : '' %>" href="/houses">Усі вулиці</a><% streets.forEach((street) => { %><a class="filter-chip <%= selectedStreetId === street._id ? 'filter-chip--active' : '' %>" href="/houses?streetId=<%= encodeURIComponent(street._id) %>"><%= street.name %></a><% }) %></div>
+    <div class="house-table-wrap">
+      <table class="house-table"><thead><tr><th>№</th><th>Вулиця</th><th>Ідентифікатор зв'язку</th></tr></thead><tbody>
+        <% houses.forEach((house) => { %><tr><td><span class="house-number"><%= house.number %></span></td><td><strong><%= streetById.get(house.streetId)?.name || 'Невідома вулиця' %></strong></td><td><code><%= house.streetId %></code></td></tr><% }) %>
+      </tbody></table>
+    </div>
+    <a class="back-action" href="/streets">← Повернутися до вулиць</a>
+  </main>
+  <footer class="site-footer"><div class="shell"><span>Львівські маршрути</span><span>Дані з NeDB</span></div></footer>
+</body>
+</html>

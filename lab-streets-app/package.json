@@ -1,0 +1,18 @@
+{
+  "name": "lab-streets-app",
+  "version": "1.0.0",
+  "description": "Вулиці та будинки Львова на Express, EJS і NeDB",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "@seald-io/nedb": "^4.1.2",
+    "ejs": "^7.0.2",
+    "express": "^5.3.0"
+  }
+}
